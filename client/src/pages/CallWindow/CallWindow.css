@@ -1,0 +1,8 @@
+.call-window {
+    flex: 1;
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }

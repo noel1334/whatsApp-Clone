@@ -1,0 +1,26 @@
+.search-bar {
+    padding: 10px 16px;
+    position: sticky; 
+    top: 56px; 
+    background: var(--secondary-bg); 
+    z-index: 1; 
+    display: flex;     
+    align-items: center;
+  }
+  
+  .search-icon {
+    width: 20px;     
+    height: 20px;
+    margin-right: 8px;
+    fill: var(--text-color);
+  }
+  
+  .search-bar input {
+    width: 100%;
+    padding: 8px;
+    background: var(--search-input-bg);
+    border: none;
+    color: var(--text-color);
+    border-radius: 5px;
+  }
+  

@@ -1,0 +1,63 @@
+
+:root {
+  --primary-bg: #121212;
+  --secondary-bg: #1e1e1e;
+  --text-color: #fff;
+  --soft-color: #a9b2ba;
+  --sidebar-hover: #2a2a2a;
+  --chat-bg: #0d1418;
+  --chat-bubble-outgoing: #005c4b;
+  --chat-bubble-incoming: #202c33;
+  --sidebar-bg: #121212;
+  --search-input-bg: #2a3942;
+  --sidebar-text: #fff;
+  --sidebar-hover: #212121;
+  --sidebar-spacing: 0px;
+  --divider-color: #2c2c2c;
+  --shadow-color: rgba(0,0,0,0.7);
+  --second-hover: #253138; 
+}
+
+.light-mode {
+  --sidebar-bg: #fff;
+  --sidebar-text: #111;
+  --sidebar-hover: rgba(0, 0, 0, 0.1);
+}
+.light-mode {
+  --sidebar-bg: #fff;
+  --sidebar-text: #111;
+  --sidebar-hover: rgba(0, 0, 0, 0.1);
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--primary-bg);
+  color: var(--text-color);
+}
+
+
+::-webkit-scrollbar {
+  width: 1px;
+  opacity: 0; 
+  transition: opacity 0.3s ease; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 1px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Show scrollbar on hover of the container */
+.container:hover::-webkit-scrollbar { 
+  opacity: 1;
+}
+
+* {
+  scrollbar-width:thin;
+  scrollbar-color: rgba(246, 246, 247, 0.11) transparent;
+}

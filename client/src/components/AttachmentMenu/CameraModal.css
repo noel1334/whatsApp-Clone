@@ -1,0 +1,84 @@
+/* CameraModal.css */
+.camera-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's on top */
+}
+
+.camera-modal-content {
+    background-color: #202c33; /* Darker background for the content */
+    border-radius: 10px;
+    padding: 15px;  /* Reduced padding */
+    width: 70%;      /* Reduced width */
+    max-width: 400px; /* Reduced max-width */
+    text-align: center;
+    color: var(--text-color);
+}
+
+.camera-header {
+    display: flex;
+    justify-content: flex-end;  /* Align close button to the right */
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.close-button {
+    background-color: transparent;
+    border: none;
+    color: var(--icon-color);
+    font-size: 24px; /* Larger close icon */
+    cursor: pointer;
+    padding: 0;      /* Remove padding */
+}
+
+.camera-preview {
+    width: 100%;
+    border-radius: 5px;
+    aspect-ratio: 4 / 3; /* Maintain a 4:3 aspect ratio */
+    object-fit: cover;  /* Ensure video fills the space */
+}
+
+.camera-controls {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around; /* Distribute icons evenly */
+    align-items: center;
+}
+
+.camera-controls button {
+    background-color: transparent; /* Make buttons transparent */
+    border: none;
+    color: var(--icon-color);
+    font-size: 28px; /* Larger icons */
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%; /* Make them circular */
+    transition: background-color 0.2s ease; /* Add hover effect */
+}
+
+.camera-controls button:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle hover effect */
+}
+
+.camera-controls button:focus {
+    outline: none; /* Remove outline on focus */
+}
+
+/* Style for recording indicator */
+.recording {
+    color: red; /* Red color for recording indicator */
+    animation: blinker 1s linear infinite; /* Blinking animation */
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}

@@ -1,0 +1,32 @@
+.chat-list-header {
+    padding: 16px;
+    font-size: 20px;
+    font-weight: bold;
+    position: sticky; 
+    top: 0; 
+    background: var(--secondary-bg); 
+    z-index: 2;
+    border-bottom: 1px solid var(--divider-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;         
+  }
+  
+  .chat-list-header h2 {
+    font-size: 18px; 
+    margin: 0;        
+  }
+  
+  .header-icons {
+    display: flex;  
+    align-items: center; 
+  }
+  
+  .header-icon {
+    width: 20px;    
+    height: 20px;
+    margin-left: 10px; 
+    fill: var(--text-color);
+    cursor: pointer;
+  }
+  

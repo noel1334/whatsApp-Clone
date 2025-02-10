@@ -1,0 +1,148 @@
+.sidebar {
+    width: 60px;
+    height: 100vh;
+    background: var(--sidebar-bg); /* Use custom property */
+    color: var(--sidebar-text); /* Use custom property */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: width 0.3s ease;
+    overflow: hidden;
+    z-index: 10;
+}
+
+
+.sidebar.expanded {
+    width: 240px;
+}
+
+.toggle-button {
+    padding: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.top-section,
+.bottom-section,
+.end-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+}
+.top-section,
+.bottom-section,
+.end-section, .meta-ai-section, .links {
+    text-decoration: none;
+    color: inherit; /* Inherit color from sidebar, which is set by --sidebar-text */
+}
+
+.meta-ai-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    margin-bottom: auto;
+}
+
+.end-section:last-child {
+    margin-bottom: 0;
+}
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.3s;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: var(--sidebar-spacing); /* Use custom property */
+}
+
+.sidebar-item:last-child {
+    margin-bottom: 0;
+}
+
+.sidebar-item:hover {
+    background: var(--sidebar-hover); /* Use custom property */
+}
+
+.icon {
+    font-size: 18px;
+    margin-right: 15px;
+    width: 24px;
+    text-align: center;
+}
+
+.text {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sidebar.expanded .text {
+    opacity: 1;
+}
+
+.unread-badge {
+    position: absolute;
+    right: 15px;
+    background: green;
+    color: white;
+    font-size: 12px;
+    padding: 3px 6px;
+    border-radius: 50%;
+}
+
+.profile-img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+     margin-right: 15px;
+}
+
+.sidebar.expanded .toggle-button {
+    justify-content: flex-start;
+    padding-left: 20px;
+}
+
+.sidebar.expanded .icon {
+    margin-right: 20px;
+}
+
+.dot-indicator {
+    position: absolute;
+    right: 15px;
+    width: 8px;
+    height: 8px;
+    background-color: green;
+    border-radius: 50%;
+}
+
+.sidebar-item:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.sidebar-divider {
+    border: none;
+    height: 1px;
+    background-color: var(--divider-color); 
+    margin: 10px 0;
+    width: 100%;
+}

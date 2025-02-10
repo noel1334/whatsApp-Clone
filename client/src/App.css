@@ -1,0 +1,11 @@
+:root {
+  --sidebar-bg: #111;
+  --sidebar-text: #fff;
+  --sidebar-hover: rgba(255, 255, 255, 0.1);
+}
+
+.light-mode {
+  --sidebar-bg: #fff;
+  --sidebar-text: #111;
+  --sidebar-hover: rgba(0, 0, 0, 0.1);
+}
